@@ -3,7 +3,10 @@ import React from "react";
 import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner } from "../components";
 
-const Home = ({ products, bannerData }) => (
+const Home = ({ products, bannerData }) => {
+    
+    return(
+
     <div>
         <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
         <div className="products-heading">
@@ -19,7 +22,7 @@ const Home = ({ products, bannerData }) => (
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </div>
-);
+)};
 
 export const getServerSideProps = async () => {
     const query = '*[_type == "product"]';
