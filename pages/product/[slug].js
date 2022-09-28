@@ -27,6 +27,7 @@ const ProductDetails = ({ product, products }) => {
                     <div className="small-image-container">
                         {image?.map((item, i) => (
                             <img
+                            key={i}
                                 src={urlFor(item)}
                                 onMouseEnter={() => setIndex(i)}
                                 className={
